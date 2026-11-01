@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>杉本雄星 | Yusei Sugimoto Portfolio</title>
+  <meta name="description" content="杉本雄星の就活用ポートフォリオ。ロボコンの大会実績、NHK学生ロボコン2024のR2画像認識・自律制御、学部・修士研究を紹介します。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' text-anchor='middle' fill='white'%3EYS%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --white:#ffffff;
+      --ink:#122033;
+      --muted:#5f6f86;
+      --blue:#2563eb;
+      --blue2:#38bdf8;
+      --line:#dbe5f2;
+      --card:#ffffffcc;
+      --shadow:0 18px 45px rgba(15, 23, 42, .12);
+      --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75}
+    a{color:inherit;text-decoration:none}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(255,255,255,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(219,229,242,.8)}
+    .brand{font-weight:800;letter-spacing:.02em}.navlinks{display:flex;gap:28px;font-size:.92rem;color:var(--muted);font-weight:700}.navlinks a:hover{color:var(--blue)}
+    section{padding:110px 7vw}.section-title{font-size:clamp(2.1rem,5vw,4.4rem);line-height:1.05;margin:0 0 18px;letter-spacing:-.04em}.section-lead{font-size:1.08rem;color:var(--muted);max-width:830px;margin:0 0 44px}.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:#fff;color:var(--blue);font-weight:800;font-size:.84rem}
+    .hero{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;padding:0 7vw;background:#111827}.hero::before{content:"";position:absolute;inset:0;background:url('assets/competition-2024.png') center/cover no-repeat;filter:blur(1.5px);transform:scale(1.02);opacity:.78}.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.82) 37%,rgba(255,255,255,.18) 70%,rgba(15,23,42,.35) 100%)}
+    .hero-content{position:relative;z-index:2;width:100%;padding-top:70px}.hero h1{font-size:clamp(3.4rem,9vw,7.8rem);line-height:.95;margin:0 0 22px;letter-spacing:-.07em}.hero h2{font-size:clamp(1.1rem,2.2vw,1.7rem);margin:0 0 22px;color:var(--blue);letter-spacing:.02em}.hero p{font-size:clamp(1rem,1.8vw,1.25rem);max-width:650px;color:#334155}.btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 22px;font-weight:800;background:var(--blue);color:#fff;box-shadow:0 12px 28px rgba(37,99,235,.25)}.btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+    .timeline{position:relative;display:grid;gap:26px;max-width:1080px}.timeline::before{content:"";position:absolute;left:94px;top:18px;bottom:18px;width:3px;background:linear-gradient(var(--blue),var(--blue2))}.tl-item{position:relative;display:grid;grid-template-columns:140px 1fr;gap:30px;align-items:start}.tl-year{font-size:1.5rem;font-weight:900;color:var(--blue)}.tl-body{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px rgba(15,23,42,.05)}.tl-body::before{content:"";position:absolute;left:80px;margin-top:9px;width:22px;height:22px;border-radius:50%;background:#fff;border:5px solid var(--blue)}.tl-body h3{margin:0 0 6px;font-size:1.15rem}.tl-body p{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 12px 35px rgba(15,23,42,.06)}.card h3{font-size:1.35rem;margin:10px 0}.card p{color:var(--muted);margin:0}.metric{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.metric div{background:#eef6ff;border:1px solid #cfe6ff;border-radius:20px;padding:18px}.metric b{display:block;font-size:1.55rem;color:var(--blue)}.metric span{font-size:.9rem;color:var(--muted);font-weight:700}
+    .split{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}.photo-card{min-height:380px;border-radius:var(--radius);background:url('assets/competition-2024.png') center/cover no-repeat;box-shadow:var(--shadow);position:relative;overflow:hidden}.photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,23,42,.55),transparent 55%)}.flow{display:grid;gap:12px}.flow-item{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px 18px}.num{flex:0 0 auto;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:900}.flow-item b{display:block}.flow-item span{display:block;color:var(--muted);font-size:.95rem}
+    .history{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.mini{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}.mini b{color:var(--blue)}.main-project{background:linear-gradient(135deg,#0f172a,#1d4ed8);color:#fff;border-radius:34px;padding:46px;box-shadow:var(--shadow)}.main-project .section-lead{color:#dbeafe}.main-project .card{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2);color:#fff}.main-project .card p{color:#dbeafe}.main-project .tag{background:rgba(255,255,255,.13);color:#fff;border-color:rgba(255,255,255,.25)}
+    .research-block{display:grid;grid-template-columns:1fr 1fr;gap:24px}.research-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:32px}.research-card h3{font-size:1.55rem;margin:10px 0}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.chip{border-radius:999px;background:#eef6ff;color:#1d4ed8;padding:8px 13px;font-weight:800;font-size:.85rem}.skill-groups{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.skill-group{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px}.skill-group h3{margin:0 0 14px}.skill-group ul{margin:0;padding-left:18px;color:var(--muted)}footer{padding:48px 7vw;background:#0f172a;color:#cbd5e1}.footer-title{font-size:1.4rem;color:#fff;font-weight:900}
+    @media(max-width:900px){.navlinks{display:none}.grid,.split,.research-block,.skill-groups,.history,.metric{grid-template-columns:1fr}.timeline::before{left:17px}.tl-item{grid-template-columns:1fr;gap:8px;padding-left:44px}.tl-body::before{left:7px}.tl-year{font-size:1.2rem}.hero::after{background:linear-gradient(90deg,rgba(255,255,255,.95),rgba(255,255,255,.72),rgba(255,255,255,.2))}section{padding:86px 6vw}.main-project{padding:30px}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <nav class="nav">
+    <a class="brand" href="#top" aria-label="杉本雄星 トップ">Yusei Sugimoto</a>
+    <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">メニュー</button>
+    <div class="navlinks" id="navigation">
+      <a href="#journey">Journey</a><a href="#robocon">Robocon</a><a href="#research">Research</a><a href="#game">Game</a><a href="#skills">Skills</a>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero-content">
+      <span class="tag">杉本 雄星 / Portfolio</span>
+      <h1>Yusei<br>Sugimoto</h1>
+      <h2><span class="nw">Robotics × BCI ×</span> <span class="nw">Human Interface</span></h2>
+      <p>ロボット開発を通じて培った制御技術と課題解決力を基盤に，現在は脳波を用いたBrain-Computer Interfaceの研究に取り組んでいます。人と機械をより自然につなぐ技術の実現を目指しています。</p>
+      <div class="btns"><a class="btn" href="#journey">View Portfolio</a><a class="btn secondary" href="#robocon">Robocon Project</a></div>
+    </div>
+  </header>
+
+  <main id="main">
+  <section id="journey">
+    <span class="tag">My Journey</span>
+    <h2 class="section-title">これまでの歩み</h2>
+    <p class="section-lead">地域活動から始まり，ロボット開発を通じて技術力とチーム力を磨き，現在は人と機械をつなぐBCI研究に挑戦しています。</p>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-year">2018</div><div class="tl-body"><h3>高校入学・鹿屋100チャレプロジェクト</h3><p>地域活性化活動に参加し，地域の魅力発信や課題解決に向けた企画・活動を経験。</p></div></div>
+      <div class="tl-item"><div class="tl-year">2022</div><div class="tl-body"><h3>東京工科大学入学・ProjectR参加</h3><p>ロボコン挑戦プロジェクトに所属。9月のF³RCで準優勝し，ロボット開発に本格的に取り組む。</p></div></div>
+      <div class="tl-item"><div class="tl-year">2023</div><div class="tl-body"><h3>複数大会への挑戦</h3><p>関東春ロボコン，NHK学生ロボコン2023に出場。東海地区交流ロボコンでは優勝。</p></div></div>
+      <div class="tl-item"><div class="tl-year">2024</div><div class="tl-body"><h3>NHK学生ロボコン2024 ベスト8</h3><p>制御部門幹部として，制御プログラム・画像認識・行動決定アルゴリズムの開発を担当。</p></div></div>
+      <div class="tl-item"><div class="tl-year">2025</div><div class="tl-body"><h3>NHK学生ロボコン2025 出場</h3><p>LiDARによるゴール・相手機体の認識と，開発段階の機体プログラムを担当。後輩育成や技術継承にも取り組む。</p></div></div>
+      <div class="tl-item"><div class="tl-year">2026</div><div class="tl-body"><h3>大学卒業・大学院進学</h3><p>芝浦工業大学大学院に進学。握る力の運動想起を用いて、仮想の手の開閉を制御するMI-BCIを研究。</p></div></div>
+    </div>
+  </section>
+
+  <section id="robocon">
+    <span class="tag">Robocon</span>
+    <h2 class="section-title">ロボコンでの挑戦</h2>
+    <p class="section-lead">大学時代はロボコン挑戦プロジェクトに所属し，制御・画像認識・行動決定アルゴリズムを中心に自律ロボット開発へ取り組みました。</p>
+    <div class="metric">
+      <div><b>Best 8 & アイデア賞</b><span>NHK学生ロボコン2024</span></div>
+      <div><b>優勝</b><span>東海地区交流ロボコン</span></div>
+      <div><b>準優勝</b><span>F³RC</span></div>
+    </div>
+    <div style="height:34px"></div>
+    <h3 style="font-size:1.9rem;margin:0 0 18px">Competition History</h3>
+    <div class="history">
+      <div class="mini"><b>2022.09</b><br>F³RC 準優勝</div>
+      <div class="mini"><b>2023.03</b><br>関東春ロボコン 出場</div>
+      <div class="mini"><b>2023.06</b><br>NHK学生ロボコン2023 出場</div>
+      <div class="mini"><b>2023.09</b><br>東海地区交流ロボコン 優勝</div>
+      <div class="mini"><b>2024.06</b><br>NHK学生ロボコン2024 ベスト8・アイデア賞</div>
+      <div class="mini"><b>2025.06</b><br>NHK学生ロボコン2025 出場</div>
+    </div>
+    <p class="small-note">順位・受賞は所属チームとしての実績です。</p>
+<div class="competitions-heading"><p class="eyebrow">COMPETITIONS &amp; MY ROLE</p><h3>競技が変われば、求められる技術も変わる。</h3><p>移動機構の制御、自律動作のための画像認識、LiDARを用いた周囲の認識。それぞれの競技で担当した技術を紹介します。</p></div>
+      <div class="competition-projects">
+        <article class="competition-project" id="tourobo2023"><div class="competition-copy"><p class="eyebrow">2023 / TEAM RESULT: 優勝</p><h3>とうロボ2023</h3><p class="competition-subtitle">ロボット・ニュータウン</p><p>段ボール箱の「建材」を運び、各スポットに積み上げる競技。共有スポットでは、最上段を相手チームと取り合います。</p><dl><div><dt>競技</dt><dd>1台・2分30秒。積み上げた建材による得点と、Vゴール条件の達成を競う。</dd></div><div><dt>自分の担当</dt><dd>ロボット移動機構の制御。</dd></div><div><dt>技術的なポイント</dt><dd>建材を安定して運ぶための移動と、積み上げる位置への正確な操作。</dd></div></dl></div><figure class="field-figure"><a class="image-link" href="assets/field-tourobo2023.jpg" data-caption="とうロボ2023の競技フィールド" aria-label="とうロボ2023の競技フィールド図を拡大"><img src="assets/field-tourobo2023.jpg" width="1076" height="644" loading="lazy" alt="とうロボ2023のフィールド図。両チームのスタートゾーンと中央へ進むゲート、建材を置くスポット。"><span class="zoom-label">図を拡大</span></a><figcaption>第13回 東海地区交流ロボットコンテスト2023 ルールブック p.3。提供資料から引用。<a href="https://tourobo.net/2023/" target="_blank" rel="noopener noreferrer">大会サイト</a></figcaption></figure></article>
+        <article class="competition-project featured-competition"><div class="competition-copy"><p class="eyebrow">2024 / TEAM RESULT: ベスト8・アイデア賞</p><h3>NHK学生ロボコン2024</h3><p class="competition-subtitle">HARVEST DAY</p><p>米づくりを題材に、2台で苗植え・籾の収穫・サイロへの貯蔵を行う競技。R2には完全自動での動作が求められます。</p><dl><div><dt>競技</dt><dd>2台・3分。得点に加え、サイロの状態による即時勝利を狙う。</dd></div><div><dt>自分の担当</dt><dd>移動機構以外のR2制御。物体検出・誤認識低減フィルタ・籾回収やサイロ選択の行動決定。</dd></div></dl><a class="button" href="#nhk2024">2024年の開発事例を詳しく見る</a></div><div class="featured-note"><span>R2</span><h4>検出した情報を、<br>次の行動へ。</h4><p>以下で、競技上の制約からシステム構成、開発画面、改善への取り組みまでを紹介します。</p></div></article>
+        <article class="competition-project" id="nhk2025"><div class="competition-copy"><p class="eyebrow">2025 / TEAM RESULT: 出場</p><h3>NHK学生ロボコン2025</h3><p class="competition-subtitle">ロボットバスケットボール</p><p>2台のロボットが攻守を切り替え、ドリブル・パス・シュートで得点を競います。動く相手やゴールとの位置関係を把握することが重要です。</p><dl><div><dt>競技</dt><dd>1回の攻撃は20秒。複数の動作を切り替え、時間内にシュートを狙う。</dd></div><div><dt>自分の担当</dt><dd>LiDARによるゴール・相手機体の認識と距離・方向の取得。開発段階の機体プログラムの作成。</dd></div><div><dt>技術的なポイント</dt><dd>周囲の対象との位置関係を取得し、機体の動作に利用できる情報にすること。</dd></div></dl></div><figure class="field-figure"><a class="image-link" href="assets/field-nhk2025.jpg" data-caption="NHK学生ロボコン2025のゲームフィールド" aria-label="NHK学生ロボコン2025のフィールド図を拡大"><img src="assets/field-nhk2025.jpg" width="1491" height="778" loading="lazy" alt="NHK学生ロボコン2025のバスケットボールコート。両端のゴールと2点・3点ゾーン。"><span class="zoom-label">図を拡大</span></a><figcaption>NHK学生ロボコン2025 ルールブック日本語版（1101公開版）p.7。提供資料から引用。</figcaption></figure></article>
+      </div>
+    
+<article class="case-study" id="nhk2024" aria-labelledby="case-title">
+    <header class="case-header"><div class="wrap"><p class="eyebrow">SELECTED WORK / NHK STUDENT ROBOCON 2024</p><h2 id="case-title">完全自動ロボットの<br>「見る・判断する・動かす」をつなぐ。</h2><p>カメラ画像から競技中の状況を捉え、籾の回収とサイロへの貯蔵につなげる。<br class="desktop-only">R2の移動機構以外の制御を担当しました。</p><dl class="case-meta"><div><dt>PROJECT</dt><dd>HARVEST DAY</dd></div><div><dt>TEAM</dt><dd>東京工科大学 プロジェクトR</dd></div><div><dt>MY ROLE</dt><dd>R2 画像認識・行動決定・制御</dd></div></dl></div></header>
+    <div class="development-heading" id="development"><p class="eyebrow">DEVELOPMENT IN PRACTICE</p><h4>開発写真から、担当技術を読む</h4><p>写真を選ぶと、画像認識・行動決定の詳しい説明へ移動できます。</p></div>
+          <div class="development-gallery"><figure><a class="photo-navigation" href="#perception-details" aria-label="画像認識の説明を読む"><img src="assets/object-detection.jpg" width="2880" height="2160" loading="lazy" alt="カメラ映像中の赤と紫のボールに検出枠を重ね、位置や距離に関する値を表示した開発画面。"><span class="detect-demo" aria-hidden="true"><span class="dd-dim"></span><span class="dd-scan"></span><span class="dd-steps"><i data-s="1"><b>1</b>検出</i><i data-s="2"><b>2</b>判断</i><i data-s="3"><b>3</b>動作</i></span><span class="dd-box dd-red" style="left:44.3%;top:40%;width:12.5%;height:16.7%"><em><span class="dd-tag">籾</span><span class="dd-mark">✓ 回収</span></em></span><span class="dd-box dd-purple" style="left:37.8%;top:52.3%;width:14.5%;height:20%"><em><span class="dd-tag">空籾</span><span class="dd-mark">✕ 除外</span></em></span><span class="dd-box dd-purple dd-label-below" style="left:55.9%;top:36.5%;width:12.6%;height:16.5%"><em><span class="dd-tag">空籾</span><span class="dd-mark">✕ 除外</span></em></span><svg class="dd-path" viewBox="0 0 100 75" preserveAspectRatio="none"><path d="M50.5 36 Q70 6 88 17" /></svg><span class="dd-silo"><span class="dd-silo-body"><i></i><i></i><i class="dd-new"></i></span><small>サイロ</small></span><span class="dd-ball"></span><span class="dd-caption"><b class="dd-cap-step"></b><span class="dd-cap-text"></span></span></span><span class="zoom-label">画像認識の説明を読む</span></a><figcaption><span>01 / OBJECT DETECTION</span><h4>画像の中から、対象を捉える。</h4><p>赤・紫のボールを検出し、枠と位置・距離に関する値を映像に重ねて表示。認識対象と出力を確認できる開発画面です。</p><button type="button" class="dd-replay">▶ 検出→判断→動作 のデモを再生</button></figcaption></figure><figure><a class="photo-navigation" href="#decision-details" aria-label="行動決定の説明を読む"><img src="assets/state-visualization.jpg" width="2880" height="2160" loading="lazy" alt="開発環境上で、菱形のグリッドと色付きの円を使ってボールの状態を表示した画面。"><span class="zoom-label">行動決定の説明を読む</span></a><figcaption><span>02 / STATE VISUALIZATION</span><h4>判断に使う状態を、見える形に。</h4><p>ボールなどの状態を色と配置で可視化。籾の回収やサイロ選択の判断に使う情報を、画面上で確認しながら開発しました。</p></figcaption></figure></div>
+        <div class="wrap case-body">
+      <nav class="case-nav" aria-label="2024年開発事例の目次"><a href="#development">開発写真</a><a href="#challenge">競技説明</a><a href="#role">自分の役割</a><a href="#system">システム構成</a><a href="#improvement">課題と改善</a><a href="#outcome">成果</a></nav>
+      <section class="case-section" id="challenge" aria-labelledby="challenge-title">
+        <div class="case-label"><span>01</span><p>THE CHALLENGE</p></div>
+        <div class="case-content"><h3 id="challenge-title">3分間で、苗植えからサイロ貯蔵まで。</h3><p class="lead">「HARVEST DAY」は、米づくりを題材とする競技です。1チーム2台のロボットで、苗植え、籾の収穫、サイロへの貯蔵を進めます。R2には完全自動での動作が求められます。</p>
+          <div class="rule-stats"><div><strong>3<span>分</span></strong><p>試合時間</p></div><div><strong>2<span>台</span></strong><p>チームのロボット</p></div><div><strong>R2</strong><p>完全自動</p></div></div>
+          <ol class="harvest-flow"><li><span class="step-no">STEP 01</span><h4>苗を植える</h4><p>R1が苗に見立てたオブジェクトを指定の場所に植えます。</p><span class="robot-label">R1</span></li><li><span class="step-no">STEP 02</span><h4>籾を収穫する</h4><p>籾に見立てたボールを集め、ストレージゾーンへ運びます。</p><span class="robot-label">R1</span></li><li><span class="step-no">STEP 03</span><h4>サイロに貯蔵する</h4><p>R2が籾を認識・回収し、状況に応じてサイロを選びます。</p><span class="robot-label accent-label">R2 / 完全自動</span></li></ol>
+          <p class="small-note">上図は競技工程と東京工科大学の機体の役割を整理したものです。開始時からストレージにボールがあるため、全工程を順番に終えるまでR2が待つわけではありません。</p>
+          <figure class="field-figure main-field"><a class="image-link" href="assets/field-nhk2024.jpg" data-caption="NHK学生ロボコン2024 HARVEST DAYの競技フィールド" aria-label="NHK学生ロボコン2024の競技フィールド図を拡大"><img src="assets/field-nhk2024.jpg" width="1600" height="1080" loading="lazy" alt="HARVEST DAYのフィールド。下からエリア1の苗植え、エリア2の収穫、エリア3のストレージと中央の5本のサイロ。"><span class="zoom-label">図を拡大</span></a><figcaption>出典：NHK学生ロボコン2024 ルールブック（2024年5月8日修正版）p.5。提供された大会説明資料から引用。</figcaption></figure>
+          <div class="rule-context"><div><p class="eyebrow">WHAT R2 NEEDS TO RECOGNIZE</p><h4>籾と空籾を見分ける</h4><p>赤・青は各チームの籾、紫は空籾です。ストレージから空籾を外へ運び出すと強制リトライになるため、回収対象の識別が重要です。</p><p class="source-note">ルールブック p.8・3.4.3(d)</p></div><div><p class="eyebrow">WHAT R2 NEEDS TO DECIDE</p><h4>サイロの色と順番を読む</h4><p>5本のうち3本で「籾3個中2個が自チーム」「一番上も自チーム」を満たすと「ムアバン」で即勝利。空きだけでなく、籾の色と順番が投入先の判断に関わります。</p><p class="source-note">ルールブック p.4–5</p></div></div>
+          <p class="small-note">ムアバンがなければ3分終了時の合計得点で決着。苗植え10点／本、収穫10点／個、サイロ貯蔵30点／個です。R1・R2間の通信と、直接のボール受け渡しは禁止されています。東京工科大学はワンバウンドでの受け渡しに対応しました。</p>
+          <a class="text-link" href="https://www.teu.ac.jp/gakubu/eng/robocon/robot.html" target="_blank" rel="noopener noreferrer">競技・機体の公式解説（東京工科大学）</a>
+        </div>
+      </section>
+      <section class="case-section" id="role" aria-labelledby="role-title">
+        <div class="case-label"><span>02</span><p>MY ROLE</p></div>
+        <div class="case-content"><h3 id="role-title">R2の認識・判断・制御を担当。</h3><p class="lead">制御部門幹部として、移動機構以外のR2制御を担当。カメラから得た情報を競技中の行動に結びつけ、機械・回路部門とも連携しました。</p>
+          <dl class="role-list"><div><dt>画像認識</dt><dd>カメラ画像を用いた物体検出。籾などの競技対象を捉える処理。</dd></div><div><dt>誤認識低減</dt><dd>検出結果に対するフィルタ。誤認識が後段の判断へ影響することを抑える処理。</dd></div><div><dt>行動決定</dt><dd>籾の回収やサイロの選択など、状況に応じて次の行動を決めるアルゴリズム。</dd></div><div><dt>機構制御</dt><dd>R2の移動機構を除く制御。認識・判断した結果を回収・貯蔵の動作につなぐ処理。</dd></div></dl>
+          <aside class="scope-note"><strong>担当範囲</strong><p>移動機構は担当外です。機体全体の開発と大会成績は、プロジェクトRのチームとしての成果です。</p></aside>
+        </div>
+      </section>
+      <section class="case-section" id="system" aria-labelledby="system-title">
+        <div class="case-label"><span>03</span><p>SYSTEM</p></div>
+        <div class="case-content"><h3 id="system-title">カメラ入力から、回収・貯蔵の動作へ。</h3><p class="lead">担当した処理を「認識」「情報の整理」「行動の決定」「制御」の流れとして示します。</p>
+          <figure class="architecture"><figcaption>R2の処理構成<span>担当内容を整理した概念図</span></figcaption><div class="input-node"><span>INPUT</span><b>カメラ画像</b></div><div class="connector" aria-hidden="true">↓</div><div class="owned-system"><p>担当した処理</p><ol><li><span>01</span><div><b>物体検出</b><small>競技対象を認識</small></div></li><li><span>02</span><div><b>誤認識低減フィルタ</b><small>判断に使う認識情報を整理</small></div></li><li><span>03</span><div><b>行動決定</b><small>籾回収・サイロ選択</small></div></li><li><span>04</span><div><b>R2の機構制御</b><small>回収・貯蔵の動作へ反映</small></div></li></ol></div><div class="excluded-system"><span>担当外</span><b>移動機構</b></div></figure>
+          <div class="technical-notes"><div id="perception-details"><h4>画像認識で扱う情報</h4><p>赤・紫のボールに検出枠を重ね、位置・距離に関する値を表示しています。実画像上の対象と検出結果を見比べながら、籾を回収するために必要な認識情報を確認しました。検出結果はフィルタを介して、後段の行動決定に利用します。</p><a href="assets/object-detection.jpg" class="image-link text-link" data-caption="物体検出の開発写真" data-alt="物体検出の開発写真">開発写真を拡大して見る</a></div><div id="decision-details"><h4>行動決定で扱う情報</h4><p>ボールなどの状態を、グリッドと色付きの円で可視化した開発画面です。籾の回収やサイロ選択の判断に使う情報を画面上で確認し、認識した状態を次の行動へ結びつける処理を開発しました。</p><a href="assets/state-visualization.jpg" class="image-link text-link" data-caption="状態を可視化した開発写真" data-alt="状態を可視化した開発写真">開発写真を拡大して見る</a></div></div>
+          </div>
+      </section>
+      <section class="case-section" id="improvement" aria-labelledby="improvement-title">
+        <div class="case-label"><span>04</span><p>ENGINEERING</p></div>
+        <div class="case-content"><h3 id="improvement-title">認識結果を、行動に使える情報にする。</h3><p class="lead">自動機では、画像認識の出力が次の動作を左右します。認識処理だけでなく、判断に渡す情報と行動の選び方までを扱いました。</p>
+          <div class="engineering-item"><div class="problem"><span>課題 / 認識</span><h4>誤認識が行動選択に影響する</h4><p>照明条件などで認識結果が変動すると、誤った対象を回収する要因になります。競技上は、籾と空籾の取り違えがリトライにもつながります。</p></div><div class="response"><span>対応</span><h4>誤認識を低減するフィルタ</h4><p>ログや認識結果を確認し、物体検出に対する判定フィルタと制御処理を修正。後段の行動決定に渡す情報を整理しました。</p></div></div>
+          <div class="engineering-item"><div class="problem"><span>課題 / 判断</span><h4>競技中に対象と状況が変化する</h4><p>籾の回収とサイロへの貯蔵では、その時点の状態に応じた行動選択が求められます。</p></div><div class="response"><span>対応</span><h4>回収・サイロ選択のアルゴリズム</h4><p>認識した状態を行動決定に結びつけ、籾の回収や貯蔵先の選択を行う処理を担当しました。</p></div></div>
+          <div class="engineering-item"><div class="problem"><span>課題 / 制御</span><h4>限られた時間で動作をつなぐ</h4><p>制限時間内に回収と貯蔵を進めるためには、各機構の動作順序やタイミングを整える必要があります。</p></div><div class="response"><span>対応</span><h4>動作順序と制御処理の調整</h4><p>不要な動作の削減、制御処理の修正、機械・回路部門との調整に取り組みました。</p></div></div>
+          <div class="key-point"><span>TECHNICAL FOCUS</span><p><span class="nw">対象を「検出できる」ことから、</span><span class="nw">ロボットが実際に「動いて回収・貯蔵する」</span><span class="nw">ところまでつなぐ。</span></p>
+            <ol class="real-flow"><li><b>検出する</b><small>カメラ画像から籾・空籾を認識</small></li><li><b>判断する</b><small>回収する籾と投入するサイロを決定</small></li><li class="is-real"><b>実機で動かす</b><small>機構を制御し、実フィールドで回収・サイロへの貯蔵まで実行</small></li></ol>
+            <p class="real-note">画面上の認識結果で終わらせず、判断結果を機構制御に渡して実機を動かし、フィールド上での動作確認と調整を重ねました。</p></div>
+        </div>
+      </section>
+      <section class="case-section" id="outcome" aria-labelledby="outcome-title">
+        <div class="case-label"><span>05</span><p>OUTCOME</p></div>
+        <div class="case-content"><div class="outcome"><p class="eyebrow">NHK STUDENT ROBOCON 2024</p><h3 id="outcome-title">チームとして、ベスト8へ。</h3><p>プロジェクトRはNHK学生ロボコン2024でベスト8に進出し、アイデア賞を受賞しました。</p><div class="outcome-separator"></div><h4>この開発で経験したこと</h4><p>画像認識の結果をフィルタ・行動決定・機構制御へつなげ、実機が実空間で籾を回収・貯蔵するところまでを実装しました。ソフトウェアの出力を、ロボットの実際の動きとして成立させる経験を得ました。</p><a class="text-link" href="https://www.teu.ac.jp/gakubu/eng/robocon/robot.html" target="_blank" rel="noopener noreferrer">公式の大会結果・R2紹介を見る</a></div></div>
+      </section>
+    </div>
+  </article>
+  
+  </section>
+
+  <section id="research">
+    <span class="tag">Research</span>
+    <h2 class="section-title">研究活動</h2>
+    <p class="section-lead">身体の状態を計測する研究から、意図を動きにつなぐ研究へ。生体信号を人と機械のインタラクションへ生かす技術に取り組んでいます。</p>
+    <div class="research-block">
+      <article class="research-card" id="undergraduate">
+        <span class="tag">Undergraduate / 卒業研究</span>
+        <h3>香りとストレスの関係を、<br>複数の指標で検証する。</h3>
+        <p class="research-subtitle">コーヒーおよびラベンダーの香りがもたらすストレス軽減効果の検証</p>
+        <figure class="research-visual"><img src="assets/undergraduate-research-concept.svg" width="640" height="400" loading="lazy" alt="暗算でストレスを与え、香り・深呼吸でリラックスし、心拍・皮膚抵抗・表情・アンケートで変化を比較する実験の流れを示したイメージ図。"><figcaption>実験の流れを示したイメージ図</figcaption></figure>
+        <p class="research-summary">計算課題でストレスを与えたあと、香りや深呼吸でどれだけ落ち着くかを、心拍などの生体信号とアンケートで評価しました。</p>
+        <ul class="research-points">
+          <li><b>担当</b>実験設計から、Arduinoによる計測、Pythonでのデータ解析まで一貫して実施</li>
+          <li><b>学び</b>生体信号は個人差やノイズが大きく、複数の指標を組み合わせて評価する重要性を実感</li>
+        </ul>
+        <div class="chips"><span class="chip">Arduino</span><span class="chip">Python</span><span class="chip">生体信号処理</span><span class="chip">統計解析</span></div>
+      </article>
+      <article class="research-card" id="graduate">
+        <span class="tag">Graduate / 研究中</span>
+        <h3>握る力のイメージを、<br>仮想の手の動きへ。</h3>
+        <p class="research-subtitle">運動想起の脳波を用いたBrain-Computer Interface（MI-BCI）</p>
+        <figure class="research-visual"><img src="assets/graduate-research-concept.svg" width="640" height="400" loading="lazy" alt="脳波キャップを着けた人物の「握るイメージ」が、仮想の手の開閉に反映される研究テーマのイメージ図。"><figcaption>研究テーマのイメージ図</figcaption></figure>
+        <p class="research-summary">手を握る動作を頭の中でイメージしたときの脳波から、力の強弱を読み取り、仮想の手の開閉に反映する仕組みを目指しています。</p>
+        <ul class="research-points">
+          <li><b>着眼点</b>「握る／握らない」だけでなく、力を強める・弱めるといった連続的な変化に注目</li>
+          <li><b>現在</b>実験課題の設計とシステムの構想段階</li>
+        </ul>
+        <div class="chips"><span class="chip">EEG</span><span class="chip">MI-BCI</span><span class="chip">信号処理</span><span class="chip">機械学習</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="game">
+    <span class="tag">Game Development / 開発中</span>
+    <h2 class="section-title">ロボコンの経験を、ゲームへ。</h2>
+    <article class="game-project">
+      <figure class="game-visual coming-soon"><div class="coming-soon-frame"><img src="assets/game-concept.png" width="1672" height="941" loading="lazy" alt="" aria-hidden="true"><div class="coming-soon-label"><span>COMING SOON</span><small>開発中</small></div></div></figure>
+      <div class="game-copy"><p class="eyebrow">WORK IN PROGRESS</p><h3>暴走ロボット<br>非常停止ゲーム</h3><p>動き続けるロボットを追いかけ、非常停止ボタンを押して止める、ロボコンをテーマにした3Dゲームを開発中です。</p><div class="chips"><span class="chip">Unity</span><span class="chip">C#</span><span class="chip">VRoid Studio</span></div></div>
+    </article>
+  </section>
+
+  <section id="skills">
+    <span class="tag">Skills</span>
+    <h2 class="section-title">Skills</h2>
+    <p class="section-lead">ロボット開発・生体計測・研究活動で扱ってきた技術領域です。</p>
+    <div class="skill-groups">
+      <div class="skill-group"><h3>Programming</h3><ul><li>C / C++</li><li>Python</li><li>C#</li></ul></div>
+      <div class="skill-group"><h3>Robotics</h3><ul><li>Arduino</li><li>Raspberry Pi</li><li>OpenCV</li><li>LiDAR</li><li>Control</li></ul></div>
+      <div class="skill-group"><h3>Research</h3><ul><li>EEG</li><li>Signal Processing</li><li>Machine Learning</li><li>Statistical Analysis</li></ul></div>
+      <div class="skill-group"><h3>Tools / Others</h3><ul><li>Git</li><li>VR / Unity</li><li>Team Development</li><li>Presentation</li></ul></div>
+    </div>
+  </section>
+
+  <div class="reference-wrap"><details class="references"><summary>参考情報・公式リンク</summary><ul><li><a href="https://www.teu.ac.jp/gakubu/eng/robocon/robot.html" target="_blank" rel="noopener noreferrer">東京工科大学：NHK学生ロボコン2024 出場報告・R2紹介</a><p>競技・機体の説明、チームの成績、公式写真は大学の掲載ページで確認できます。</p></li><li><a href="https://www.teu.ac.jp/gakubu/eng/robocon.html" target="_blank" rel="noopener noreferrer">東京工科大学：プロジェクトR</a></li><li><a href="https://sites.google.com/edu.teu.ac.jp/projectr/history/robot" target="_blank" rel="noopener noreferrer">プロジェクトR：これまで開発してきたロボット</a><p>チームの過去の活動を紹介するページです。</p></li><li><a href="https://official-robocon.com/robocon_wp/wordpress/wp-content/uploads/2024/05/0508%E4%BF%AE%E6%AD%A3_%E5%AD%A6%E7%94%9F%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B32024%E3%83%AB%E3%83%BC%E3%83%AB%E3%83%96%E3%83%83%E3%82%AF-2.pdf" target="_blank" rel="noopener noreferrer">NHK学生ロボコン2024 公式ルールブック（PDF）</a></li></ul></details>
+  </div>
+  </main>
+<dialog class="image-dialog" id="image-dialog" aria-labelledby="image-dialog-title"><div class="dialog-header"><h2 id="image-dialog-title">画像を拡大</h2><button type="button" class="dialog-close">閉じる</button></div><img class="dialog-image" alt=""></dialog>
+
+<div class="runaway" aria-live="polite">
+    <button type="button" class="runaway-bot" aria-label="走り回るロボットの非常停止ボタンを押す">
+      <svg viewBox="0 0 72 60" width="72" height="60" aria-hidden="true"><rect x="10" y="10" width="4" height="22" fill="#94a3b8"/><rect x="58" y="10" width="4" height="22" fill="#94a3b8"/><rect x="8" y="8" width="56" height="4" rx="2" fill="#94a3b8"/><rect x="6" y="28" width="60" height="18" rx="4" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/><rect x="6" y="40" width="60" height="6" fill="#2563eb"/><rect x="24" y="16" width="24" height="13" rx="3" fill="#facc15" stroke="#a16207" stroke-width="1.5"/><g class="estop"><rect x="29" y="11" width="14" height="6" rx="2" fill="#b91c1c"/><ellipse cx="36" cy="11" rx="9" ry="4.5" fill="#ef4444"/></g><circle class="lamp" cx="56" cy="35" r="3" fill="#22c55e"/><g class="wheel"><circle cx="18" cy="49" r="8" fill="#1f2937"/><circle cx="18" cy="49" r="3" fill="#9ca3af"/><rect x="17" y="41" width="2" height="4" fill="#9ca3af"/></g><g class="wheel"><circle cx="54" cy="49" r="8" fill="#1f2937"/><circle cx="54" cy="49" r="3" fill="#9ca3af"/><rect x="53" y="41" width="2" height="4" fill="#9ca3af"/></g></svg>
+    </button>
+    <div class="runaway-bubble" hidden></div>
+  </div>
+
+  <footer>
+    <div class="footer-title">Yusei Sugimoto Portfolio</div>
+    <p>Robotics × BCI × Human Interface</p>
+  </footer>
+</body>
+</html>

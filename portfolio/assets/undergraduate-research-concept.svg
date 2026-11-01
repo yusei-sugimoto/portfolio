@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f9ff"/><stop offset="1" stop-color="#e3efff"/></linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg)"/>
+  <circle cx="580" cy="340" r="90" fill="#dbeafe" opacity=".5"/>
+  <circle cx="40" cy="40" r="70" fill="#dbeafe" opacity=".5"/>
+
+  <!-- step cards -->
+  <g fill="#ffffff" stroke="#dbe5f2" stroke-width="2">
+    <rect x="28" y="70" width="166" height="190" rx="22"/>
+    <rect x="237" y="70" width="166" height="190" rx="22"/>
+    <rect x="446" y="70" width="166" height="190" rx="22"/>
+  </g>
+  <g font-size="12" font-weight="800" fill="#2563eb" text-anchor="middle" letter-spacing="1.5">
+    <text x="111" y="100">STEP 1</text><text x="320" y="100">STEP 2</text><text x="529" y="100">STEP 3</text>
+  </g>
+
+  <!-- 1: calculation task -->
+  <rect x="66" y="120" width="90" height="70" rx="12" fill="#eef6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="111" y="164" text-anchor="middle" font-size="22" font-weight="800" fill="#1e3a8a">43×5</text>
+  <circle cx="152" cy="124" r="16" fill="#fff" stroke="#f97316" stroke-width="3"/>
+  <path d="M152 114 v10 l7 5" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round"/>
+  <text x="111" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#122033">暗算で</text>
+  <text x="111" y="242" text-anchor="middle" font-size="15" font-weight="700" fill="#122033">ストレスを与える</text>
+
+  <!-- 2: aroma -->
+  <g fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round">
+    <path d="M296 150 q-8 -10 0 -20 t0 -20"/>
+    <path d="M314 146 q-8 -10 0 -20 t0 -20"/>
+  </g>
+  <path d="M282 156 h56 l-6 40 a8 8 0 0 1 -8 7 h-28 a8 8 0 0 1 -8 -7 z" fill="#ffffff" stroke="#2563eb" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M287 170 h46" stroke="#92400e" stroke-width="8" opacity=".55"/>
+  <g transform="translate(356 120)">
+    <path d="M0 80 C2 50 4 30 6 0" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/>
+    <g fill="#8b5cf6"><ellipse cx="6" cy="4" rx="5" ry="7"/><ellipse cx="1" cy="16" rx="5" ry="7"/><ellipse cx="11" cy="18" rx="5" ry="7"/><ellipse cx="2" cy="30" rx="5" ry="7"/><ellipse cx="11" cy="32" rx="5" ry="7"/></g>
+  </g>
+  <text x="320" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#122033">香り・深呼吸で</text>
+  <text x="320" y="242" text-anchor="middle" font-size="15" font-weight="700" fill="#122033">1分間リラックス</text>
+
+  <!-- 3: measurement -->
+  <path d="M529 196 l-34 -32 a19 19 0 0 1 34 -22 a19 19 0 0 1 34 22 z" fill="#fee2e2" stroke="#ef4444" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M484 162 h24 l6 -12 8 26 7 -18 5 4 h46" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="529" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#122033">心と体の変化を</text>
+  <text x="529" y="242" text-anchor="middle" font-size="15" font-weight="700" fill="#122033">複数の指標で比較</text>
+
+  <!-- arrows -->
+  <g fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M202 165 h26 M220 157 l9 8 -9 8"/>
+    <path d="M411 165 h26 M429 157 l9 8 -9 8"/>
+  </g>
+
+  <!-- indices -->
+  <g font-size="13" font-weight="700" text-anchor="middle">
+    <rect x="62" y="300" width="116" height="34" rx="17" fill="#ffffff" stroke="#cfe6ff"/><text x="120" y="322" fill="#1d4ed8">心拍数</text>
+    <rect x="196" y="300" width="116" height="34" rx="17" fill="#ffffff" stroke="#cfe6ff"/><text x="254" y="322" fill="#1d4ed8">皮膚抵抗</text>
+    <rect x="330" y="300" width="116" height="34" rx="17" fill="#ffffff" stroke="#cfe6ff"/><text x="388" y="322" fill="#1d4ed8">表情</text>
+    <rect x="464" y="300" width="116" height="34" rx="17" fill="#ffffff" stroke="#cfe6ff"/><text x="522" y="322" fill="#1d4ed8">アンケート</text>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f9ff"/><stop offset="1" stop-color="#e3efff"/></linearGradient>
+    <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#bae6fd"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg)"/>
+  <circle cx="560" cy="60" r="90" fill="#dbeafe" opacity=".5"/>
+  <circle cx="70" cy="360" r="70" fill="#dbeafe" opacity=".5"/>
+
+  <!-- person with EEG cap -->
+  <g transform="translate(120 190)">
+    <path d="M-62 120 Q-62 62 0 62 Q62 62 62 120 Z" fill="#cbd5e1"/>
+    <rect x="-14" y="38" width="28" height="30" rx="8" fill="#e2e8f0"/>
+    <circle r="56" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <path d="M-56 -4 A56 56 0 0 1 56 -4 Q0 -18 -56 -4 Z" fill="#2563eb"/>
+    <g fill="#ffffff" stroke="#93c5fd" stroke-width="2">
+      <circle cx="-34" cy="-24" r="6"/><circle cx="-12" cy="-40" r="6"/><circle cx="14" cy="-40" r="6"/><circle cx="36" cy="-24" r="6"/><circle cx="1" cy="-20" r="6"/>
+    </g>
+    <circle cx="26" cy="12" r="4" fill="#334155"/>
+  </g>
+  <text x="120" y="356" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">握るイメージ</text>
+  <text x="120" y="376" text-anchor="middle" font-size="12" fill="#64748b">（運動想起の脳波）</text>
+
+  <!-- signal -->
+  <path d="M192 168 q10 -22 20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M296 168 h16" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+  <path d="M308 158 l14 10 -14 10" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- hands -->
+  <g fill="#ffffff" stroke="#2563eb" stroke-width="3" stroke-linejoin="round">
+    <!-- open -->
+    <g transform="translate(380 150)">
+      <rect x="-12" y="-46" width="11" height="44" rx="5.5"/>
+      <rect x="1" y="-54" width="11" height="52" rx="5.5"/>
+      <rect x="14" y="-50" width="11" height="48" rx="5.5"/>
+      <rect x="27" y="-40" width="11" height="38" rx="5.5"/>
+      <rect x="-30" y="0" width="12" height="36" rx="6" transform="rotate(-35 -24 18)"/>
+      <rect x="-14" y="-6" width="54" height="56" rx="16"/>
+    </g>
+    <!-- half -->
+    <g transform="translate(470 150)">
+      <path d="M-12 -2 v-22 a5.5 5.5 0 0 1 11 0 v22"/>
+      <path d="M1 -2 v-28 a5.5 5.5 0 0 1 11 0 v28"/>
+      <path d="M14 -2 v-26 a5.5 5.5 0 0 1 11 0 v26"/>
+      <path d="M27 -2 v-20 a5.5 5.5 0 0 1 11 0 v20"/>
+      <rect x="-26" y="2" width="12" height="32" rx="6" transform="rotate(-20 -20 18)"/>
+      <rect x="-14" y="-6" width="54" height="56" rx="16"/>
+    </g>
+    <!-- closed -->
+    <g transform="translate(560 150)">
+      <rect x="-14" y="-6" width="54" height="56" rx="18"/>
+      <path d="M-14 12 h54 M-14 26 h54" stroke="#93c5fd"/>
+      <path d="M0 -6 v18 M13 -6 v18 M26 -6 v18" stroke="#93c5fd"/>
+      <rect x="-20" y="14" width="34" height="12" rx="6"/>
+    </g>
+  </g>
+  <rect x="356" y="240" width="234" height="10" rx="5" fill="url(#bar)"/>
+  <text x="356" y="276" font-size="13" font-weight="700" fill="#0ea5e9">開く</text>
+  <text x="590" y="276" text-anchor="end" font-size="13" font-weight="700" fill="#1d4ed8">握る</text>
+  <text x="473" y="356" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">仮想の手の開閉</text>
+  <text x="473" y="376" text-anchor="middle" font-size="12" fill="#64748b">（力の強弱を手の動きに反映）</text>
+</svg>
